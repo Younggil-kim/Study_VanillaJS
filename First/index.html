@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jungle Cinema</title>
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+  </head>
+  <body>
+    <div class="nav-skip">
+        <a href="#cont-nav">영화목록 바로가기</a>
+        <a href="#cont-company">회사정보 바로가기</a>
+    </div>
+
+
+    <h1 class="sr-only">정글 시네마</h1>
+    <section class="cont-movie">
+      <h2 class="tit-cont">정글 시네마 영화 목록</h2>
+      <header">
+        <!-- 헤더도 섹션 영역이기때문에 제목 붙여주기 -->
+        <h3 class="sr-only">영화 정보 목록</h3>
+        <!-- 그다음 탭선택 목록 nav -->
+        <nav id="cont-nav" class="nav-movie">
+          <ul class="list-movieNav">
+              <!-- on은 활성화여부 (탭) -->
+            <li class="on"><a href="#none" class="link-nav">현재상영영화</a></li>
+            <li><a href="#none" class="link-nav">개봉예정영화</a></li>
+            <li><a href="#none" class="link-nav">박스오피스</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <h3 class="sr-only">현재 상영 영화 목록</h3>
+        <ul class="list-movieInfo">
+          <li>
+            <article>
+              <!-- 아티클은 독립적으로 쓸 수 있는 연관 컨텐츠 -->
+              <h4 class="sr-only">영화 상세 정보</h4>
+              <a href="#none" class="link-movie">
+                <img src="src/imges/포스터 이미지-1.png" alt="위니브 월드 : 새로운 시대" />
+              </a>
+              <strong class="tit-movie sr-ellipsis">위니브 월드 : 새로운 시대</strong>
+              <!-- dl 태그는 설명을 위한 목록 
+                dt는 제목, dl은 내용
+                -->
+              <dl class="list-info">
+                <div>
+                    <dt>개요</dt>
+                    <dd>판타지</dd>
+                </div>
+                <div class="item-star">
+                    <dt>평점</dt>
+                    <dd>9.05</dd>
+                </div>
+                <div>
+                    <dt>개봉</dt>
+                    <dd>2022-03-07</dd>
+                </div>
+                <div>
+                    <dt>출연</dt>
+                    <dd class="multi-ellipsis">
+                      라이켓, 소울곰, 제리씨, 벙키, 뮤리, 자바독, 소울곰, 웨이드
+                    </dd>
+                </div>
+
+              </dl>
+            </article>
+            <a href="#none" class="link-reserv">예매하기</a>
+            <a href="#none" class="link-teaser">예고편</a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <footer id="cont-company" class="cont-company">
+      <section class="cont-coInfo">
+        <h2 class="sr-only">기업정보</h2>
+        <strong class="tit-company">jungle Cinema</strong>
+        <dl class="list-coInfo">
+          <dt class="sr-only">사명</dt>
+          <dd>(주)정글 시네마</dd>
+
+          <dt>대표</dt>
+          <dd>라이캣</dd>
+
+          <dt>사업자번호</dt>
+          <dd>000-0000-00000</dd>
+          <dd>광고 영화 및 비디오물 제작업</dd>
+
+          <dt>주소</dt>
+          <dd>경기도 수원시</dd>
+        </dl>
+
+        <em class="sr-only">SNS 링크 목록</em>
+        <ul class="list-sns">
+          <li><a href="#none" class="link-twitter">트위터</a></li>
+          <li><a href="#none"  class="link-insta">인스타그렘</a></li>
+          <li><a href="#none" class="link-facebook">페이스북</a></li>
+        </ul>
+        <small class="txt-copy">CopyRight &copy;The Jungle, All right Reserved.</small>
+      </section>
+    </footer>
+  </body>
+</html>

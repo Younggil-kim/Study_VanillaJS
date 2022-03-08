@@ -1,0 +1,144 @@
+#app{
+    overflow: scroll;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+img{
+    width:100%;
+}
+
+.movie-container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    width: 673px;
+    margin: 0 auto;
+}
+
+.movie{
+    display: flex;
+    /* 자식 요소 수직정렬 */
+    align-items: center;
+
+    /* UI에서 포스터부분이 부모 영역을 조금 벗어났기때문에  absoulte를 적용하려고
+    이거 relative 해주는거 */
+    position: relative;
+    margin-left: 64px;
+}
+
+.poster-container{
+    /* 부모의 realteive 기준으로 움직임 */
+    position: absolute;
+    left: -64px;
+    width: 281px;
+    height:396px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.content{
+    width: 608px;
+    height: 500px;
+    background-color: #333;
+    border-radius: 15px;
+    color: white;
+    padding: 64px 0 0 266px;
+    box-sizing: border-box;
+}
+
+.content-type span{
+    color: #BDBDBD;
+
+}
+
+.content-type span + span::before{
+    content: '';
+    width: 1px;
+    height: 13px;
+    display: inline-block;
+    background-color: #BDBDBD;
+    margin: 0px 7px -1px 3px;
+}
+
+.content-title{
+    margin: 13px 0 114px 0;
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 700;
+}
+
+.content-favorite{
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.content-favorite button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:60px;
+    height: 60px;
+    border: 2px solid #FFFFFF;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.button-recommend .icon-thumbs-up{
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 29px;
+    height: 29px;
+    background: center / contain url(../image/icon_thumbs_up.png) no-repeat;
+}
+.button-recommend.on{
+    background-color: #2F80ED;
+}
+.button-recommend.on .icon-thumbs-up{
+
+    background: center / contain url(../image/icon_thumbs_up_fill.png) no-repeat;
+}
+.button-heart .icon-heart{
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 29px;
+    height: 29px;
+    background: center / contain url(../image/icon_heart.png) no-repeat;
+
+}
+.button-heart.on{
+    background-color: #EB5757;
+}
+.button-heart.on .icon-heart{
+    background: center / contain url(../image/icon_heart_fill.png) no-repeat;
+}
+
+.star-average{
+    /* em은 inline요소라서 margin 적용안됨
+    그래서 display 해야해 */
+    display: block;
+    margin-bottom: 16px;
+}
+
+.star-point-container{
+    display: flex;
+    /* flex-direction: ; */
+    align-items: center;
+}
+
+.star-background{
+    display: flex;
+
+}
+
+.star-background img{
+    width: 51px;
+    height: 51px;
+
+}
+
+.icon-remove-star img{
+    width: 22px;
+    height: 22px;
+    margin-left: 11px;
+}
